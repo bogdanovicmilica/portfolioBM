@@ -1,0 +1,512 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+@import "partials/mixins";
+@import "partials/variables";
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url("../img/background_three.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: darken($color: #000000, $amount: 5%);
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+};
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#header-all{
+    @include flexCenter;
+     color: $primary_color;
+     height: 30%;
+     img{
+        width: $width_1;
+        border-radius: 25px;
+     }
+        
+};
+.navigation{
+    @include flexCenter;
+    li{
+        margin: 10px;
+        text-transform: uppercase;
+        font-size: 15pt;
+        a{
+            color: $primary_color;
+            text-decoration: none;
+            &:hover {
+                color: $third_color;
+                transition: 0.5s;
+                &::after{
+                    transition: 0.7s;
+                }
+            }
+        }
+    }
+};
+ul{
+    @include fontText;
+};
+.ja2{
+    display: none;
+}
+.block_one{
+    @include flexCenter;
+    width: 80%;
+    margin-top: 5%;
+    img{
+        width: 35%;
+        padding: 0px 0px 0px 30px;
+    }
+}
+.text{
+    @include fontText;
+    h2{
+        text-transform: uppercase;
+        font-size: 25pt;
+        font-weight: 300;
+        span{
+            font-weight: 800;
+        }
+    }
+    h1{
+        font-size: 30pt;
+        color: $primary_color;
+        text-transform: uppercase;
+        text-align: center;
+        hr{
+            color: $primary_color;
+            p{
+                text-align: center;
+                font-size: 14pt;
+            }
+        }
+    }
+}
+progress{
+    width: 100%;
+}
+hr{
+    border: solid 1px $primary_color;
+}
+#block_two{
+    /*background-image: url(../img/background_two.jpg);
+    background-repeat: no-repeat;*/
+    background-color: $primary_color;
+    background-size: 100%;
+    height: $height_two;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text_two{
+    width: 100%;
+    font-size: 14pt;
+    color: $secondary_color;
+    font-weight: 200;
+    padding: 50px;
+    word-break: break-word;
+    @include flexColumn;
+    @include font_text;
+        h3{
+            @include fontText;
+            font-weight: $font_weight_one;
+            font-size: 35pt;
+            color: $secondary_color;
+            margin: $margin;
+            text-align: center;
+        }
+        p{
+            text-align: left;
+            font-size: 14pt;
+            font-weight: 600;
+        }
+}
+.proj{
+    @include flexColumn;
+    padding: 30px;
+}
+#projects{
+    @include flexCenter;
+    width: $block_width;
+    border-radius: $border-radius;
+    margin: 0px;
+        img{
+            width: 430px;
+            border-radius: 20px;
+            box-shadow: 7px 7px #00000019;
+            &:hover{
+                opacity: 0.8;
+                transition: 0.7s;
+                transition: 0.6s;
+                &::after{
+                    transition: 0.6s;
+            }
+        }
+    }
+}
+.p1{
+    color: $primary_color;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 23pt;
+    @include fontText;
+    text-align: center;
+    font-weight: 300;
+    border: 1px solid $primary_color;
+    border-radius: 5px;
+    width: 30%;
+    span{
+        font-weight: 800;
+    }
+}
+#projects h4{
+    color: $primary_color;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 20pt;
+    @include fontText;
+    text-align: center;
+    font-weight: 300;
+}
+hr{
+    width: 100%;
+}
+form{
+    @include fontText;
+    width: 60%;
+    padding: 20px;
+    height: 400px;
+    background: linear-gradient( to bottom, $primary_color, $primary_color);
+    border-radius: 30px;
+    margin-bottom: 4%;
+    input[type]{
+        padding: 15px;
+        margin: 20px;
+        width: 60%;
+        border-radius: 7px;
+        border: none;
+        &:focus{
+            background-color: $primary_color;
+            color: $secondary_color;
+            transition: 0.7s;
+        }
+    }
+    h5{
+        margin-top: $margin;
+        font-size: 20pt;
+        font-weight: 800;
+        padding: 0px 0px 0px 20px;
+        color: $secondary_color;
+    }
+}
+#form{
+    padding: 10px 20px;
+}
+button{
+    @include fontText;
+    font-weight: $font_weight_one;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 11pt;
+    border: none; 
+    background-color: $primary_color;
+    color: $secondary_color;
+    text-transform: uppercase;
+    &:hover{
+        color: $third_color;
+        transition: 0.5s;
+        &::after{
+            transition: 0.5s;
+        }
+    }
+}
+textarea{
+    border-radius: 7px;
+    @include fontText;
+    color: $primary_color;
+    padding: 7px;
+    margin-bottom: 10px;
+    font-weight: 200;
+    padding: 15px;
+    margin: 20px;
+    width: 60%;
+    &:focus{
+        background-color: $primary_color;
+        color: $secondary_color;
+        transition: 0.7s;
+    }
+}
+.tt{
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 5px;
+    @include fontText;
+    font-weight: 400;
+    word-break: break-word;
+    width: 70%;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: $secondary_color;
+        &:hover{
+            color: $third_color;
+            transition: 0.7s;
+            &::after{
+                transition: 0.7s;
+            }
+        }
+    
+    }
+}
+footer{
+    color: $secondary_color;
+    background-color: $primary_color;
+    @include flexColumn;
+    i{
+        color: $secondary_color;
+        padding: 7px;
+        font-size: 20pt;
+        text-align: center;
+        @include flexCenter;
+        align-items: center;
+    }
+    .copy{
+        @include fontText;
+        font-weight: 100;
+        font-size: 10pt;
+        color: $secondary_color;
+    }
+}
+@media screen and (max-width: 1250px){
+        #block_two .text_two{
+            width: 100%;
+            word-break: break-all;
+            margin: 0px auto;
+            p{
+                font-weight: 200;
+                font-size: 12pt;
+        }
+        h3{
+            margin-top: 0px;
+        }
+    }
+        #text_two{
+            font-size: 10pt;
+            padding: 10px;
+            
+    }
+    #projects{
+        @include flexColumn;
+        border: none;
+        padding: 15px;
+        width: 94%;
+        overflow: hidden;
+        margin: 0%;
+        img{
+            width: 400px;
+            align-items: center;
+        }
+    }
+}
+@media screen and (max-width: 940px){
+    .block_one{
+        @include flexColumn;
+        margin-top: 0%;
+        img{
+            width: 300px;
+        }
+    }
+    #projects{
+        border: none;
+        h1{
+            background-color: $primary_color;
+            color: $secondary_color;
+            border-radius: 15px;
+            padding: 10px;
+            hr{
+                border: 1px solid $secondary_color;
+            }
+        }
+    }
+}
+    #block_two .text_two{
+        word-break: normal;
+        font-size: 10pt;
+        .block_two{
+            height: $height_two;
+    }
+}
+@media screen and (max-width: 760px){
+    .block_one{
+        width: 94%;
+        img{
+            width: 300px;
+            padding: 0px;
+        }
+        .text{
+            width: 40%;
+            h1{
+                font-size: 30pt;
+            }
+        }
+    }
+    #block_two .text_two{
+        p{
+            font-weight: 100;
+            font-size: 11pt;
+        }
+        h3{
+            font-size: 28pt;
+        }
+    }
+}
+@media screen and (max-width: 720px){
+    #projects{
+        width: 94%;
+        hr{ display: none;}
+        h1{
+            font-size: 40pt;
+            background-color: transparent;
+            color: $secondary_color;
+            @include fontText;
+            font-weight: $font_weight_one;
+            img{
+                width: 400px;
+            }
+        }
+    }
+    footer .tt a{
+        padding: 10px;
+        font-size: 10pt;
+        font-weight: 200;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 630px){
+    .navigation li a{
+        font-size: 13pt;
+    }
+    form{
+        width: 60%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: $secondary_color;
+        color: $primary_color;
+        :focus{
+            background-color: $primary_color;
+            color: $secondary_color;
+            border: none;
+        }
+    }
+    #projects{
+        img{
+            width: 300px;
+        }
+        h1{
+            font-size: 30pt;
+        }
+    }
+    #block_two .text_two p{
+        font-weight: 200;
+        font-size: 10pt;
+        h3{
+            font-size: 17pt;
+        }
+    }
+    .text_two{
+        width: 50%;
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 400px){
+    #header-all li a{
+        font-size: 10pt;
+    }
+    .navigation{
+        padding: 0px;
+    }
+    #header_all{
+        width: 94%;
+        padding: 0;
+        img{
+            width: 20px;
+        }
+    }
+    .block_one{
+        display: block;
+        .text{
+            width: 94%;
+            h1{
+                font-size: 23pt;
+                font-weight: bolder;
+            }
+            h2{
+                font-size: 20pt;
+            }
+        }
+        img{
+            width: 200px;
+            @include flexCenter;
+        }
+    }
+    #block_two{
+        @include flexColumn;
+        height: 40%;
+        .text_two{
+            width: 90%;
+            h3{
+                font-size: 18pt;
+            }
+            p{
+                font-size: 9pt;
+            }
+        }
+    }
+    #projects{
+        width: 94%;
+        padding: 0px;
+        img{
+            border-radius: 20px;
+            width: 300px;
+        }
+    }
+    
+    .p1{
+        width: 94%;
+        margin: 0px;
+        border: 0px;
+    }
+    form{
+        padding: 10px;
+    }
+    #form{
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        button{
+            text-align: right;
+        }
+    }
+    footer{
+        i{
+            padding: 0px 15px;
+            font-size: 25pt;
+            display: inline;
+        }
+    }
+}

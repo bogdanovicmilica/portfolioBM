@@ -1,0 +1,574 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("../img/background_three.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: black;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#header-all {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  color: black;
+  height: 30%;
+}
+#header-all img {
+  width: 70px;
+  border-radius: 25px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.navigation li {
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 15pt;
+}
+.navigation li a {
+  color: black;
+  text-decoration: none;
+}
+.navigation li a:hover {
+  color: orangered;
+  transition: 0.5s;
+}
+.navigation li a:hover::after {
+  transition: 0.7s;
+}
+
+ul {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ja2 {
+  display: none;
+}
+
+.block_one {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+  margin-top: 5%;
+}
+.block_one img {
+  width: 35%;
+  padding: 0px 0px 0px 30px;
+}
+
+.text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.text h2 {
+  text-transform: uppercase;
+  font-size: 25pt;
+  font-weight: 300;
+}
+.text h2 span {
+  font-weight: 800;
+}
+.text h1 {
+  font-size: 30pt;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+}
+.text h1 hr {
+  color: black;
+}
+.text h1 hr p {
+  text-align: center;
+  font-size: 14pt;
+}
+
+progress {
+  width: 100%;
+}
+
+hr {
+  border: solid 1px black;
+}
+
+#block_two {
+  /*background-image: url(../img/background_two.jpg);
+  background-repeat: no-repeat;*/
+  background-color: black;
+  background-size: 100%;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text_two {
+  width: 100%;
+  font-size: 14pt;
+  color: white;
+  font-weight: 200;
+  padding: 50px;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.text_two h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35pt;
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+.text_two p {
+  text-align: left;
+  font-size: 14pt;
+  font-weight: 600;
+}
+
+.proj {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+#projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+  border-radius: 100px;
+  margin: 0px;
+}
+#projects img {
+  width: 430px;
+  border-radius: 20px;
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.0980392157);
+}
+#projects img:hover {
+  opacity: 0.8;
+  transition: 0.7s;
+  transition: 0.6s;
+}
+#projects img:hover::after {
+  transition: 0.6s;
+}
+
+.p1 {
+  color: black;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 23pt;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-weight: 300;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30%;
+}
+.p1 span {
+  font-weight: 800;
+}
+
+#projects h4 {
+  color: black;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 20pt;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-weight: 300;
+}
+
+hr {
+  width: 100%;
+}
+
+form {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 60%;
+  padding: 20px;
+  height: 400px;
+  background: linear-gradient(to bottom, black, black);
+  border-radius: 30px;
+  margin-bottom: 4%;
+}
+form input[type] {
+  padding: 15px;
+  margin: 20px;
+  width: 60%;
+  border-radius: 7px;
+  border: none;
+}
+form input[type]:focus {
+  background-color: black;
+  color: white;
+  transition: 0.7s;
+}
+form h5 {
+  margin-top: 10px;
+  font-size: 20pt;
+  font-weight: 800;
+  padding: 0px 0px 0px 20px;
+  color: white;
+}
+
+#form {
+  padding: 10px 20px;
+}
+
+button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 11pt;
+  border: none;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+button:hover {
+  color: orangered;
+  transition: 0.5s;
+}
+button:hover::after {
+  transition: 0.5s;
+}
+
+textarea {
+  border-radius: 7px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  padding: 7px;
+  margin-bottom: 10px;
+  font-weight: 200;
+  padding: 15px;
+  margin: 20px;
+  width: 60%;
+}
+textarea:focus {
+  background-color: black;
+  color: white;
+  transition: 0.7s;
+}
+
+.tt {
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
+  word-break: break-word;
+  width: 70%;
+  text-align: center;
+}
+.tt a {
+  text-decoration: none;
+  color: white;
+}
+.tt a:hover {
+  color: orangered;
+  transition: 0.7s;
+}
+.tt a:hover::after {
+  transition: 0.7s;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+footer i {
+  color: white;
+  padding: 7px;
+  font-size: 20pt;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  align-items: center;
+}
+footer .copy {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10pt;
+  color: white;
+}
+
+@media screen and (max-width: 1250px) {
+  #block_two .text_two {
+    width: 100%;
+    word-break: break-all;
+    margin: 0px auto;
+  }
+  #block_two .text_two p {
+    font-weight: 200;
+    font-size: 12pt;
+  }
+  #block_two .text_two h3 {
+    margin-top: 0px;
+  }
+  #text_two {
+    font-size: 10pt;
+    padding: 10px;
+  }
+  #projects {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 15px;
+    width: 94%;
+    overflow: hidden;
+    margin: 0%;
+  }
+  #projects img {
+    width: 400px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 940px) {
+  .block_one {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0%;
+  }
+  .block_one img {
+    width: 300px;
+  }
+  #projects {
+    border: none;
+  }
+  #projects h1 {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+  }
+  #projects h1 hr {
+    border: 1px solid white;
+  }
+}
+#block_two .text_two {
+  word-break: normal;
+  font-size: 10pt;
+}
+#block_two .text_two .block_two {
+  height: 400px;
+}
+
+@media screen and (max-width: 760px) {
+  .block_one {
+    width: 94%;
+  }
+  .block_one img {
+    width: 300px;
+    padding: 0px;
+  }
+  .block_one .text {
+    width: 40%;
+  }
+  .block_one .text h1 {
+    font-size: 30pt;
+  }
+  #block_two .text_two p {
+    font-weight: 100;
+    font-size: 11pt;
+  }
+  #block_two .text_two h3 {
+    font-size: 28pt;
+  }
+}
+@media screen and (max-width: 720px) {
+  #projects {
+    width: 94%;
+  }
+  #projects hr {
+    display: none;
+  }
+  #projects h1 {
+    font-size: 40pt;
+    background-color: transparent;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 600;
+  }
+  #projects h1 img {
+    width: 400px;
+  }
+  footer .tt a {
+    padding: 10px;
+    font-size: 10pt;
+    font-weight: 200;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 630px) {
+  .navigation li a {
+    font-size: 13pt;
+  }
+  form {
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+  }
+  form :focus {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  #projects img {
+    width: 300px;
+  }
+  #projects h1 {
+    font-size: 30pt;
+  }
+  #block_two .text_two p {
+    font-weight: 200;
+    font-size: 10pt;
+  }
+  #block_two .text_two p h3 {
+    font-size: 17pt;
+  }
+  .text_two {
+    width: 50%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #header-all li a {
+    font-size: 10pt;
+  }
+  .navigation {
+    padding: 0px;
+  }
+  #header_all {
+    width: 94%;
+    padding: 0;
+  }
+  #header_all img {
+    width: 20px;
+  }
+  .block_one {
+    display: block;
+  }
+  .block_one .text {
+    width: 94%;
+  }
+  .block_one .text h1 {
+    font-size: 23pt;
+    font-weight: bolder;
+  }
+  .block_one .text h2 {
+    font-size: 20pt;
+  }
+  .block_one img {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+  #block_two {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+  }
+  #block_two .text_two {
+    width: 90%;
+  }
+  #block_two .text_two h3 {
+    font-size: 18pt;
+  }
+  #block_two .text_two p {
+    font-size: 9pt;
+  }
+  #projects {
+    width: 94%;
+    padding: 0px;
+  }
+  #projects img {
+    border-radius: 20px;
+    width: 300px;
+  }
+  .p1 {
+    width: 94%;
+    margin: 0px;
+    border: 0px;
+  }
+  form {
+    padding: 10px;
+  }
+  #form {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+  }
+  #form button {
+    text-align: right;
+  }
+  footer i {
+    padding: 0px 15px;
+    font-size: 25pt;
+    display: inline;
+  }
+}/*# sourceMappingURL=style.css.map */
